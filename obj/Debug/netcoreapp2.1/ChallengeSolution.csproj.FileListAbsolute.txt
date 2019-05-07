@@ -1,0 +1,11 @@
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\bin\Debug\netcoreapp2.1\ChallengeSolution.deps.json
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\bin\Debug\netcoreapp2.1\ChallengeSolution.runtimeconfig.json
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\bin\Debug\netcoreapp2.1\ChallengeSolution.runtimeconfig.dev.json
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\bin\Debug\netcoreapp2.1\ChallengeSolution.dll
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\bin\Debug\netcoreapp2.1\ChallengeSolution.pdb
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\obj\Debug\netcoreapp2.1\ChallengeSolution.csprojAssemblyReference.cache
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\obj\Debug\netcoreapp2.1\ChallengeSolution.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\obj\Debug\netcoreapp2.1\ChallengeSolution.AssemblyInfoInputs.cache
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\obj\Debug\netcoreapp2.1\ChallengeSolution.AssemblyInfo.cs
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\obj\Debug\netcoreapp2.1\ChallengeSolution.dll
+C:\Users\matth\Desktop\JobHunt\Microgroove\ChallengeSolution\obj\Debug\netcoreapp2.1\ChallengeSolution.pdb
