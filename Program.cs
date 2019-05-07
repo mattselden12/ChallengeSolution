@@ -7,10 +7,10 @@ namespace ChallengeSolution
 {
     class Program
     {
-        public static string ConvertCSVtoJSON()
+        public static string ConvertCSVtoJSON(string filepath, string folderpath)
         {
             // Insert complete file path of the file to be parsed in the following TextFieldParser parameter slot.
-            using (var csvReader = new StringReader(File.ReadAllText(@"C:\Users\matth\Desktop\JobHunt\Microgroove\Input2.txt")))
+            using (var csvReader = new StringReader(File.ReadAllText(@filepath)))
             using (var parser = new NotVisualBasic.FileIO.CsvTextFieldParser(csvReader))
             {
                 Batch ThisBatch = new Batch();
@@ -69,12 +69,14 @@ namespace ChallengeSolution
                 }
                 string json = JsonConvert.SerializeObject(ThisBatch);
                 string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented);
+                // C:\Users\matth\Desktop\JobHunt\Microgroove
+                System.IO.File.WriteAllText(@folderpath+@"\output.json", jsonFormatted);
                 return jsonFormatted;
             }
         }
         static void Main(string[] args)
         {
-            string temp = ConvertCSVtoJSON();
+            string temp = ConvertCSVtoJSON(args[0], args[1]);
             Console.WriteLine(temp);
         }
     }
