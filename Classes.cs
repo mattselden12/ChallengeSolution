@@ -9,7 +9,6 @@ namespace ChallengeSolution
         public string type;
         public List<Order> orders = new List<Order>();
         public Ender ender;
-        public Order ActiveOrder;
     }
     public class Ender
     {

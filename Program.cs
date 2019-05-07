@@ -14,6 +14,7 @@ namespace ChallengeSolution
             using (var parser = new NotVisualBasic.FileIO.CsvTextFieldParser(csvReader))
             {
                 Batch ThisBatch = new Batch();
+                Order ActiveOrder = new Order("","","");
                 while (!parser.EndOfData)
                 {
                     //Process row
@@ -36,19 +37,19 @@ namespace ChallengeSolution
                     else if (fields[0] == "O")
                     {
                         Order ThisOrder = new Order(fields[1], fields[2], fields[3]);
-                        ThisBatch.ActiveOrder = ThisOrder;
+                        ActiveOrder = ThisOrder;
                     }
                     else if (fields[0] == "B")
                     {
                         Buyer ThisBuyer = new Buyer(fields[1], fields[2], fields[3]);
-                        ThisBatch.ActiveOrder.buyer = ThisBuyer;
+                        ActiveOrder.buyer = ThisBuyer;
                     }
                     else if (fields[0] == "L")
                     {
                         int ThisQty;
                         Int32.TryParse(fields[2], out ThisQty);
                         Item ThisItem = new Item(fields[1], ThisQty);
-                        ThisBatch.ActiveOrder.items.Add(ThisItem);
+                        ActiveOrder.items.Add(ThisItem);
                     }
                     else if (fields[0] == "T")
                     {
@@ -62,8 +63,8 @@ namespace ChallengeSolution
                         Int32.TryParse(fields[4], out ThisOffset);
                         int ThisPause;
                         Int32.TryParse(fields[5], out ThisPause);
-                        ThisBatch.ActiveOrder.timings = new Timings(ThisStart, ThisStop, ThisGap, ThisOffset, ThisPause);
-                        ThisBatch.orders.Add(ThisBatch.ActiveOrder);
+                        ActiveOrder.timings = new Timings(ThisStart, ThisStop, ThisGap, ThisOffset, ThisPause);
+                        ThisBatch.orders.Add(ActiveOrder);
                     }
                 }
                 string json = JsonConvert.SerializeObject(ThisBatch);
