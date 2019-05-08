@@ -68,7 +68,6 @@ namespace ChallengeSolution{
                 }
                 string json = JsonConvert.SerializeObject(ThisBatch);
                 string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented);
-                // C:\Users\matth\Desktop\JobHunt\Microgroove
                 System.IO.File.WriteAllText(@folderpath + @"\output.json", jsonFormatted);
                 return json;
             }

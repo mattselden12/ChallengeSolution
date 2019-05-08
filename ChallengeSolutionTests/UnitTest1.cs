@@ -10,10 +10,10 @@ namespace ChallengeSolutionTests
         public void Test1()
         {
             string expected = "{\"date\":\"08/04/2018\",\"type\":\" By Batch #\",\"orders\":[{\"date\":\"08/04/2018\",\"code\":\"ONF002793300\",\"number\":\"080427bd1\",\"buyer\":{\"name\":\"Brett Nagy\",\"street\":\"5825 221st Place S.E.\",\"zip\":\"98027\"},\"items\":[{\"sku\":\"602527788265\",\"qty\":2},{\"sku\":\"602517642850\",\"qty\":1}],\"timings\":{\"start\":3,\"stop\":3,\"gap\":0,\"offset\":2,\"pause\":0}}],\"ender\":{\"process\":1,\"paid\":2,\"created\":9}}";
-            string actual = Solution.ConvertCSVtoJSON(@"C:\Users\matth\Desktop\JobHunt\Microgroove\Input2.txt", @"C:\Users\matth\Desktop\JobHunt\Microgroove");
+            // insert file path to input file in first parameter, and output for json into second parameter.
+            string actual = Solution.ConvertCSVtoJSON("", "");
 
             Assert.Equal(expected, actual);
-
         }
     }
 }
