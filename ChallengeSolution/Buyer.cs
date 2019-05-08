@@ -5,9 +5,9 @@ namespace ChallengeSolution
 {
     public class Buyer
     {
-        public string name;
-        public string street;
-        public string zip;
+        public string name { get; set; }
+        public string street { get; set; }
+        public string zip { get; set; }
         public Buyer(string bname, string bstreet, string bzip)
         {
             this.name = bname;

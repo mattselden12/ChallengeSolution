@@ -5,8 +5,8 @@ namespace ChallengeSolution
 {
     public class Item
     {
-        public string sku;
-        public int qty;
+        public string sku { get; set; }
+        public int qty { get; set; }
         public Item(string isku, int iqty)
         {
             this.sku = isku;
